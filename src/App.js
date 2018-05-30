@@ -7,7 +7,10 @@ import Company from './components/company'
 import Giftdivision from './components/giftdivision'
 import Thanks from './components/thanks'
 import User from './components/user'
+import Itemcollect from './components/itemcollect'
+import Workingpoint from './components/workingpoint'
 import commit from './js/commit'
+
 import './App.css';
 
 import protrait from './img/protrait.png'
@@ -22,9 +25,9 @@ class App extends Component {
     }
 
     componentWillMount() {
-        let ticket = commit.getUrlParam('ticket');
+        // let ticket = commit.getUrlParam('ticket');
         let pathName = this.props.location.pathname;
-        const self= this;
+        // const self= this;
         // commit.GETDATA(
         //     'http://10.0.40.130/brithdaybless/rest/nowPersonInfo?ticket=' + ticket, {},
         //     function (response) {
@@ -78,10 +81,10 @@ class App extends Component {
                 this.props.history.push("/banner");
                 break;
             case '2' :
-                this.props.history.push("/select");
+                this.props.history.push("/itemcollect");
                 break;
             case '3' :
-                this.props.history.push("/user");
+                this.props.history.push("/workingpoint");
                 break;
             case '4' :
                 this.props.history.push("/company");
@@ -154,11 +157,13 @@ class App extends Component {
                                 <HashRouter>
                                     <div>
                                         <Route path = '/banner' component = {Banner} />
+                                         <Route path = '/itemcollect' component = {Itemcollect} />
                                         <Route path = '/select' component = {Select} />
                                         <Route path = '/company' component = {Company} />
                                         <Route path = '/giftdivision' component = {Giftdivision} />
                                         <Route path = '/thanks' component = {Thanks} />
                                         <Route path = '/user' component = {User} />
+                                        <Route path = '/workingpoint' component = {Workingpoint} />
                                     </div>
                                 </HashRouter>
                             </Content>

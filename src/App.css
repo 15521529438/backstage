@@ -98,7 +98,7 @@
   word-break: break-all;
 }
 .ant-layout > .ant-layout-content{
-  padding: 0 20px !important;
+  padding: 0 !important;
 }
 /*.ant-menu {*/
 /*background: #1e212b;*/
@@ -143,3 +143,102 @@
   /*background: url(img/bs_nor.png) no-repeat center;*/
   /*background-size: 100%;*/
 /*}*/
+
+
+/*itemcollect*/
+.content_itemcollect_top {
+  height: 1.241rem;
+  display: block;
+  overflow: hidden;
+  border-bottom: solid 1px #e0e5f6;
+}
+
+.content_itemcollect_top > p, .header_mark > p {
+  font-size: 0.333rem;
+  color: #2a78f6;
+  margin: 0.556rem 0 0 0.648rem; 
+  position: relative;
+}
+
+.content_itemcollect_top > p::before, .header_mark > p::before {
+    content: '';
+    display: block;
+    width: 0.074rem;
+    height: 0.296rem;
+    background-color: #2a78f6;
+    position: absolute;
+    left: -0.278rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content_itemcollect_top_main {
+  margin: 0.37rem 0 0.444rem 0.352rem;
+}
+
+.content_itemcollect_top_main  p {
+  display: inline-block;
+  margin-right: 0.241rem;
+  color: #666666;
+}
+
+.ant-select-enabled {
+  margin-right: 0.87rem;
+}
+
+.content_itemcollect_top_main_des > p, .content_itemcollect_top_main_map > p {
+  float: left;
+} 
+
+.content_itemcollect_top_main_des > span {
+  line-height: 0.4rem;
+  font-size: 0.259rem;
+  color: #444444;
+}
+
+.content_itemcollect_top_main_map {
+  margin-top: 0.481rem;
+  overflow: hidden;
+}
+
+.content_itemcollect_top_main_map > div {
+  width: 28.796rem;
+  height: 5.759rem;
+  border: 1px solid #333;
+  float: left;
+}
+
+.content_itemcollect_bottom {
+  padding: 0 0.38rem;
+  box-sizing: border-box;
+}
+
+.content_itemcollect_bottom .content_itemcollect_top {
+  /*margin: 0 -0.38rem;*/
+}
+
+/*workingpoint*/
+.content_workingpoint .content_itemcollect_top > p {
+  display: inline-block;
+}
+
+.content_workingpoint_top, .content_workingpoint_top > p {
+    display: inline-block;
+}
+
+.content_workingpoint_top{
+    float: right;
+    margin-top: 0.556rem;
+}
+
+.content_workingpoint_top .ant-select-enabled {
+    margin-right: 0.37rem;
+}
+
+.content_workingpoint_bottom {
+  display: flex;
+}
+
+.content_workingpoint_bottom > div {
+  flex: 1;
+}
