@@ -11,6 +11,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route } from 'react-router-dom';
 import './index.css';
+import './js/adaptive.js'
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 

@@ -10,7 +10,6 @@ import User from './components/user'
 import commit from './js/commit'
 import './App.css';
 
-import logo from './img/logo.png'
 import protrait from './img/protrait.png'
 
 class App extends Component {
@@ -26,23 +25,24 @@ class App extends Component {
         let ticket = commit.getUrlParam('ticket');
         let pathName = this.props.location.pathname;
         const self= this;
-        commit.GETDATA(
-            'http://10.0.40.130/brithdaybless/rest/nowPersonInfo?ticket=' + ticket, {},
-            function (response) {
-                if (response.data&&response.data.data){
-                    self.setState({
-                        ticket,
-                        data:response.data.data,
-                        avatar:response.data.data.photoUrl
-                    });
-                };
-            },
-            '获取当前登入用户信息失败')
+        // commit.GETDATA(
+        //     'http://10.0.40.130/brithdaybless/rest/nowPersonInfo?ticket=' + ticket, {},
+        //     function (response) {
+        //         if (response.data&&response.data.data){
+        //             self.setState({
+        //                 ticket,
+        //                 data:response.data.data,
+        //                 avatar:response.data.data.photoUrl
+        //             });
+        //         };
+        //     },
+        //     '获取当前登入用户信息失败')
         let defaultKeys;
         let sub;
         switch(pathName) {
             case '/banner':
                 defaultKeys = '1';
+                sub = 'sub1';
                 break;
             case '/select':
                 defaultKeys = '2';
@@ -64,6 +64,7 @@ class App extends Component {
                 break;
             default:
                 defaultKeys = '1';
+                sub = 'sub1';
                 break;
         }
         this.setState({defaultKeys, sub})
@@ -74,22 +75,22 @@ class App extends Component {
         // let self = this;
         switch (param.key) {
             case '1' :
-                this.props.history.push("/banner?ticket="+this.state.ticket);
+                this.props.history.push("/banner");
                 break;
             case '2' :
-                this.props.history.push("/select?ticket="+this.state.ticket);
+                this.props.history.push("/select");
                 break;
             case '3' :
-                this.props.history.push("/user?ticket="+this.state.ticket);
+                this.props.history.push("/user");
                 break;
             case '4' :
-                this.props.history.push("/company?ticket="+this.state.ticket);
+                this.props.history.push("/company");
                 break;
             case '5' :
-                this.props.history.push("/giftdivision?ticket="+this.state.ticket);
+                this.props.history.push("/giftdivision");
                 break;
             case '6' :
-                this.props.history.push("/thanks?ticket="+this.state.ticket);
+                this.props.history.push("/thanks");
                 break;
             default :
                 break;
@@ -99,18 +100,15 @@ class App extends Component {
         const { SubMenu } = Menu;
         const { Header, Content, Sider } = Layout;
         // console.log('ticket',ticket)
-        // if (this.state.ticket) {
-        // <p><img src={ this.state.avatar } alt="" className="hgroupAvatar"/>{this.state.data.username}</p>   113行的
-        if (true) {    
+        if (true) {
             return (
                 <Layout>
                     <Header className="header">
                         <hgroup className="logo">
-                            <img src={ logo } alt=""/>
-                            <p>生日祝福</p>
+                            <p>深圳市地铁施工监测管理与预警系统</p>
                         </hgroup>
                         <hgroup className="headerExit">
-                             
+
                             <p>退出</p>
                         </hgroup>
                     </Header>
@@ -124,23 +122,31 @@ class App extends Component {
                                 style={{ height: '100%', borderRight: 0 }}
                                 onClick={this.goTo}
                             >
-                                <Menu.Item key="1" className="menu-first">
-                                    <Icon type="bars" />
-                                    Banner管理
-                                </Menu.Item>
-                                <SubMenu key="sub1" title={<span><Icon type="gift" /><span>礼品/礼物管理</span></span>}>
-                                    <Menu.Item key="4">公司礼品</Menu.Item>
-                                    <Menu.Item key="5">礼物专区</Menu.Item>
-                                    <Menu.Item key="6">答谢专区</Menu.Item>
+                                 <SubMenu key="sub1" title={<span><Icon type="gift" /><span>信息总览</span></span>} className="menu-first">
+                                    <Menu.Item key="1">数据驾驶舱</Menu.Item>
+                                    <Menu.Item key="2">项目总览 </Menu.Item>
+                                    <Menu.Item key="3">工点总览</Menu.Item>
                                 </SubMenu>
-                                <Menu.Item key="2">
-                                    <Icon type="profile" />
-                                    礼品选择明细
-                                </Menu.Item>
-                                <Menu.Item key="3">
-                                    <Icon type="user" />
-                                    用户管理
-                                </Menu.Item>
+                                <SubMenu key="sub2" title={<span><Icon type="gift" /><span>工程配置</span></span>}>
+                                    <Menu.Item key="4">信息项目配置</Menu.Item>
+                                    <Menu.Item key="5">工程进度管理</Menu.Item>
+                                    <Menu.Item key="6">工程文档管理</Menu.Item>
+                                </SubMenu>
+                                <SubMenu key="sub3" title={<span><Icon type="gift" /><span>检测管理</span></span>}>
+                                    <Menu.Item key="7">测点配置</Menu.Item>
+                                    <Menu.Item key="8">数据录入</Menu.Item>
+                                    <Menu.Item key="9">数据查询</Menu.Item>
+                                </SubMenu>
+                                <SubMenu key="sub4" title={<span><Icon type="gift" /><span>风险源管理</span></span>}>
+                                    <Menu.Item key="10">测点配置</Menu.Item>
+                                    <Menu.Item key="11">数据录入</Menu.Item>
+                                    <Menu.Item key="12">数据查询</Menu.Item>
+                                </SubMenu>
+                                <SubMenu key="sub5" title={<span><Icon type="gift" /><span>预警分级处理</span></span>}>
+                                    <Menu.Item key="13">预警推送</Menu.Item>
+                                    <Menu.Item key="14">数据录入</Menu.Item>
+                                    <Menu.Item key="15">数据查询</Menu.Item>
+                                </SubMenu>
                             </Menu>
                         </Sider>
                         <Layout style={{ padding: '24px', position: 'relative' }}>

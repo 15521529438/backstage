@@ -3,12 +3,13 @@
 }
 
 .header {
-  background: #2a71db url('./img/topbackground.png') right bottom / 60% no-repeat;
-  background-size: 60%;
+  background-color: #2a78f6;
+  box-shadow: 0rem 0.007rem 0.04rem 0rem rgba(42, 71, 149, 0.27);
 }
 
 .header > hgroup {
   display: inline-block;
+  font-size: 0.133rem;
 }
 .ant-layout-header {
   padding: 0 20px;
@@ -19,18 +20,7 @@
   display: inline-block;
   color: white;
   margin: 0;
-  padding-left: 20px;
-}
-
-.logo > p::after {
-  content: '';
-  position: absolute;
-  width: 1px;
-  height: 14px;
-  background-color: rgba(255, 255, 255, 0.3);
-  left: 0px;
-  top: 50%;
-  transform: translateY(-50%);
+  font-size: 0.37rem;
 }
 
 .logo > img {
