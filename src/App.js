@@ -116,7 +116,7 @@ class App extends Component {
                         </hgroup>
                     </Header>
                     <Layout>
-                        <Sider width={200} style={{ background: '#fff' }}>
+                        <Sider style={{ background: '#fff' }}>
                             <Menu
                                 mode="inline"
                                 theme="dark"
