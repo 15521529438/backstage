@@ -60,12 +60,12 @@ const menus = [
 			{
 				name: '数据录入',
 				key: 8,
-				routePath: '',
+				routePath: 'datasEntery',
 			},
 			{
 				name: '数据查询',
 				key: 9,
-				routePath: '',
+				routePath: 'datasQuery',
 			},
 		],
 	},

@@ -1,0 +1,81 @@
+.formContent {
+    width: 100%;
+}
+
+.formContent .formItem {
+    display: inline-block;
+}
+.formContent .formItem>span {
+    display: inline-block;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.baseQueryContent {
+    padding: 30px 20px;
+}
+
+.baseHandleBtn {
+    margin: 0 5px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.chooseCheckTypeContent {
+    padding: 0 20px 20px;
+    overflow: hidden;
+}
+
+.chooseCheckTypeContent .chooseDateRange {
+    float: right;
+}
+
+.chooseCheckTypeContent .chooseDateRange > span{
+    margin-right: 15px;
+}
+
+
+.checkLineTypeHeader {
+    padding: 0 20px 20px;
+    overflow: hidden;
+}
+
+.chooseChartDatas, .chooseChartType {
+    display: inline-block;
+    margin-right: 20px;
+    line-height: 32px;
+}
+.chooseChartDatas {
+    margin-right: 25px;
+}
+.chooseChartDatas > span, .chooseChartType > span {
+    margin-right: 15px;
+    font-family: MicrosoftYaHei;
+    font-size: 16px;
+    color: #333333;
+}
+.handleContent {
+    float: right;
+}
+
+/*.chooseCheckContent .ant-tabs-bar{
+    display: none!important;
+}*/
+/*.chooseCheckContent .ant-tabs-nav .ant-tabs-tab{
+    !*padding: 0;*!
+    margin: 0;
+    border: 1px solid #2a78f6;
+    padding: 0 30px;
+    color: #1890ff;
+}
+.chooseCheckContent .ant-btn-primary {
+
+}
+.chooseCheckContent .ant-tabs-nav .ant-tabs-tab-active{
+    background: #1890ff;
+}
+
+.chooseCheckContent .ant-tabs-tab-active .ant-btn {
+    background: rgba(255, 255, 255, 0);
+    color: white;
+}*/

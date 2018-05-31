@@ -1,0 +1,27 @@
+.formContent {
+    width: 100%;
+}
+
+.formContent .formItem {
+    display: inline-block;
+}
+.formContent .formItem>span {
+    display: inline-block;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.baseQueryContent {
+    padding: 30px 20px;
+}
+
+.baseHandleBtn {
+    margin: 0 5px;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.detectionTime {
+    /*top: 0!important;*/
+}
+

@@ -7,6 +7,8 @@ import Projectmessage from './components/project/projectmessage'
 import Projectprogress from './components/project/projectprogress'
 import Projectdocument from './components/project/projectdocument'
 import DetectionPointConfig from './components/detectionManage/detectionPointConfig';
+import DatasEntery from './components/detectionManage/datasEntery';
+import DatasQuery from './components/detectionManage/datasQuery';
 // import commit from './js/commit'
 import './App.css';
 import protrait from './img/protrait.png'
@@ -150,6 +152,8 @@ class App extends Component {
                                         <Route path = '/itemcollect' component = {Itemcollect} />
                                         <Route path = '/workingpoint' component = {Workingpoint} />
                                         <Route path = '/detectionPointConfig' component = {DetectionPointConfig} />
+                                        <Route path = '/datasEntery' component = {DatasEntery} />
+                                        <Route path = '/datasQuery' component = {DatasQuery} />
                                         <Route path = '/projectmessage' component = {Projectmessage} />
                                         <Route path = '/projectprogress' component = {Projectprogress} />
                                         <Route path = '/projectdocument' component = {Projectdocument} />
