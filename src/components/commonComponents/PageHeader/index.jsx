@@ -7,7 +7,7 @@ export default class PageHeader extends Component {
         const { title='' } = this.props;
         return(
             <div className="pageHeaderContent">
-                <div><i className="titleLine"></i><span className="pageTitle">{title}</span></div>
+                <div><i className="titleLine">&nbsp;</i><span className="pageTitle">{title}</span></div>
             </div>
         );
     }

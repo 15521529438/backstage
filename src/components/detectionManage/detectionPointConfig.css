@@ -1,0 +1,41 @@
+.formContent {
+    width: 100%;
+}
+
+.formContent .formItem {
+    display: inline-block;
+}
+.formContent .formItem>span {
+    display: inline-block;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.baseQueryContent {
+    padding: 30px 20px;
+}
+
+.baseHandleBtn {
+    margin: 0 5px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.advancedQueryContent {
+    padding: 0 20px 20px;
+}
+
+.advancedTitle {
+    height: 16px;
+    font-family: MicrosoftYaHei;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    color: #666666;
+}
+
+.advancedTitle .filteIcon {
+    font-size: 16px;
+}
+
+

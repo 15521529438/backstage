@@ -6,7 +6,7 @@ import Workingpoint from './components/pandect/workingpoint'
 import Projectmessage from './components/project/projectmessage'
 import Projectprogress from './components/project/projectprogress'
 import Projectdocument from './components/project/projectdocument'
-import DetectionPointConfig from './components/detectionManage/detectionPointConfig/index';
+import DetectionPointConfig from './components/detectionManage/detectionPointConfig';
 // import commit from './js/commit'
 import './App.css';
 import protrait from './img/protrait.png'
