@@ -3,7 +3,7 @@ import { Select, Table, Divider, Icon   } from 'antd';
 
 // import Tabcontent from './tabcontent'
 // import Drop from './dropdown';
-import commit from '../js/commit'
+// import commit from '../js/commit.js'
 // const { RangePicker } = DatePicker;
 // const Search = Input.Search;
 // import ReactDOM from 'react-dom';
@@ -74,11 +74,11 @@ const columns = [{
       width: 295,
       render: (text, record) => (
         <span>
-          <a href="javascript:;">Action</a>
+          <a>Action</a>
           <Divider type="vertical" />
-          <a href="javascript:;">Delete</a>
+          <a>Delete</a>
           <Divider type="vertical" />
-          <a href="javascript:;" className="ant-dropdown-link">
+          <a className="ant-dropdown-link">
             More actions <Icon type="down" />
           </a>
         </span>

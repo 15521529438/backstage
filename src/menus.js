@@ -32,17 +32,17 @@ const menus = [
 			{
 				name: '信息项目配置',
 				key: 4,
-				routePath: 'banner',
+				routePath: 'projectmessage',
 			},
 			{
 				name: '工程进度管理',
 				key: 5,
-				routePath: 'itemcollect',
+				routePath: 'projectprogress',
 			},
 			{
 				name: '工程文档管理',
 				key: 6,
-				routePath: 'workingpoint',
+				routePath: 'projectdocument',
 			},
 		],
 	},
@@ -60,12 +60,12 @@ const menus = [
 			{
 				name: '数据录入',
 				key: 8,
-				routePath: 'itemcollect',
+				routePath: '',
 			},
 			{
 				name: '数据查询',
 				key: 9,
-				routePath: 'workingpoint',
+				routePath: '',
 			},
 		],
 	},
@@ -78,17 +78,17 @@ const menus = [
 			{
 				name: '测点配置',
 				key: 10,
-				routePath: 'banner',
+				routePath: '',
 			},
 			{
 				name: '数据录入',
 				key: 11,
-				routePath: 'itemcollect',
+				routePath: '',
 			},
 			{
 				name: '数据查询',
 				key: 12,
-				routePath: 'workingpoint',
+				routePath: '',
 			},
 		],
 	},
@@ -101,17 +101,17 @@ const menus = [
 			{
 				name: '预警推送',
 				key: 13,
-				routePath: 'banner',
+				routePath: '',
 			},
 			{
 				name: '数据录入',
 				key: 14,
-				routePath: 'itemcollect',
+				routePath: '',
 			},
 			{
 				name: '数据查询',
 				key: 15,
-				routePath: 'workingpoint',
+				routePath: '',
 			},
 		],
 	},

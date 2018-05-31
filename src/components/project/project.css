@@ -1,0 +1,40 @@
+/*projectmessage*/
+.message > input {
+    width: 264px;
+    margin-left: 10px;
+}
+.message > span {
+    margin-left: 22px;
+}
+
+.message_input_last {
+    margin-right: 30px;
+}
+
+.message_button_last {
+    margin-left: 15px;
+    border: solid 1px #2a78f6;
+}
+
+/*projectprogress*/
+.progress, .doc {
+    margin: 27px 0 26px 0;
+}
+
+.progress .ant-select-enabled {
+    margin-right: 0;
+}
+
+.progress .ant-calendar-picker {
+    margin-left: 0;
+    margin-right: 19px;
+}
+
+.progress .ant-btn, .doc .ant-btn {
+    border: solid 1px #2a78f6;
+}
+
+/*projectdocument*/
+.doc .ant-select-enabled {
+    margin-right: 25px;
+}

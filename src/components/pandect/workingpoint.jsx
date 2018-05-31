@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select, Table, Icon, Divider } from 'antd';
+import { Select, Table } from 'antd';
 // import commit from '../js/commit'
 // import ReactDOM from 'react-dom';
 // 引入 ECharts 主模块

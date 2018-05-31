@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import { HashRouter, Route} from 'react-router-dom';
 import { Layout, Menu, Icon } from 'antd';
-import Select from './components/select'
-import Banner from './components/banner'
-import Company from './components/company'
-import Giftdivision from './components/giftdivision'
-import Thanks from './components/thanks'
-import User from './components/user'
-import Itemcollect from './components/itemcollect'
-import Workingpoint from './components/workingpoint'
+import Itemcollect from './components/pandect/itemcollect'
+import Workingpoint from './components/pandect/workingpoint'
+import Projectmessage from './components/project/projectmessage'
+import Projectprogress from './components/project/projectprogress'
+import Projectdocument from './components/project/projectdocument'
 import DetectionPointConfig from './components/detectionManage/detectionPointConfig/index';
-import commit from './js/commit'
+// import commit from './js/commit'
 import './App.css';
 import protrait from './img/protrait.png'
 import menus from './menus';
@@ -28,21 +25,7 @@ class App extends Component {
     }
 
     componentWillMount() {
-        // let ticket = commit.getUrlParam('ticket');
         let pathName = this.props.location.pathname;
-        // const self= this;
-        // commit.GETDATA(
-        //     'http://10.0.40.130/brithdaybless/rest/nowPersonInfo?ticket=' + ticket, {},
-        //     function (response) {
-        //         if (response.data&&response.data.data){
-        //             self.setState({
-        //                 ticket,
-        //                 data:response.data.data,
-        //                 avatar:response.data.data.photoUrl
-        //             });
-        //         };
-        //     },
-        //     '获取当前登入用户信息失败')
         let defaultKeys;
         let sub;
         switch(pathName) {
@@ -83,29 +66,6 @@ class App extends Component {
             const routePath = item.props.routePath;
             this.props.history.push(`${routePath}`);
         }
-        // let self = this;
-        /*switch (param.key) {
-            case '1' :
-                this.props.history.push("/banner");
-                break;
-            case '2' :
-                this.props.history.push("/itemcollect");
-                break;
-            case '3' :
-                this.props.history.push("/workingpoint");
-                break;
-            case '4' :
-                this.props.history.push("/company");
-                break;
-            case '5' :
-                this.props.history.push("/giftdivision");
-                break;
-            case '6' :
-                this.props.history.push("/thanks");
-                break;
-            default :
-                break;
-        }*/
     }
 
     // 生成菜单
@@ -183,19 +143,17 @@ class App extends Component {
                                 </SubMenu>*/}
                             </Menu>
                         </Sider>
-                        <Layout style={{ padding: '24px', position: 'relative' }}>
-                            <Content style={{ background: '#fff', padding: 24, margin: 0 }}>
+                        <Layout style={{ padding: '24px', position: 'relative',paddingRight: 0 }}>
+                            <Content style={{ background: '#fff', margin: 0 }}>
                                 <HashRouter>
                                     <div>
-                                        <Route path = '/banner' component = {Banner} />
                                         <Route path = '/itemcollect' component = {Itemcollect} />
-                                        <Route path = '/select' component = {Select} />
-                                        <Route path = '/company' component = {Company} />
-                                        <Route path = '/giftdivision' component = {Giftdivision} />
-                                        <Route path = '/thanks' component = {Thanks} />
-                                        <Route path = '/user' component = {User} />
                                         <Route path = '/workingpoint' component = {Workingpoint} />
                                         <Route path = '/detectionPointConfig' component = {DetectionPointConfig} />
+                                        <Route path = '/projectmessage' component = {Projectmessage} />
+                                        <Route path = '/projectprogress' component = {Projectprogress} />
+                                        <Route path = '/projectdocument' component = {Projectdocument} />
+                                        
                                     </div>
                                 </HashRouter>
                             </Content>
