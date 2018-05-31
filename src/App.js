@@ -9,11 +9,14 @@ import Thanks from './components/thanks'
 import User from './components/user'
 import Itemcollect from './components/itemcollect'
 import Workingpoint from './components/workingpoint'
+import DetectionPointConfig from './components/detectionManage/detectionPointConfig/index';
 import commit from './js/commit'
-
 import './App.css';
-
 import protrait from './img/protrait.png'
+import menus from './menus';
+
+const { SubMenu } = Menu;
+const { Header, Content, Sider } = Layout;
 
 class App extends Component {
     constructor(props){
@@ -74,9 +77,14 @@ class App extends Component {
         // this.setState({ticket})
     }
 
-    goTo(param){
+    goTo(param={}){
+        const { item={} } = param;
+        if(item.props && item.props.routePath){
+            const routePath = item.props.routePath;
+            this.props.history.push(`${routePath}`);
+        }
         // let self = this;
-        switch (param.key) {
+        /*switch (param.key) {
             case '1' :
                 this.props.history.push("/banner");
                 break;
@@ -97,11 +105,31 @@ class App extends Component {
                 break;
             default :
                 break;
-        }
+        }*/
     }
+
+    // 生成菜单
+    createSideFirstMenus = (menus=[]) => {
+        if(!menus) return;
+        return menus.map(item => {
+            const { key, name, icon, isMenuFirst, children=[], routePath="" } =item;
+            const menuTitle = <span><Icon type={icon} /><span>{name}</span></span>
+            return(
+                <SubMenu key={key} title={menuTitle} className={isMenuFirst?"menu-first":""}>
+                    {
+                        children.map(secItem => {
+                            const secPath = `${routePath}/${secItem.routePath}`;
+                            return(
+                                <Menu.Item key={secItem.key} routePath={secPath}>{secItem.name}</Menu.Item>
+                            );
+                        })
+                    }
+                </SubMenu>
+            );
+        })
+    }
+
     render() {
-        const { SubMenu } = Menu;
-        const { Header, Content, Sider } = Layout;
         // console.log('ticket',ticket)
         if (true) {
             return (
@@ -125,31 +153,34 @@ class App extends Component {
                                 style={{ height: '100%', borderRight: 0 }}
                                 onClick={this.goTo}
                             >
-                                 <SubMenu key="sub1" title={<span><Icon type="gift" /><span>信息总览</span></span>} className="menu-first">
-                                    <Menu.Item key="1">数据驾驶舱</Menu.Item>
-                                    <Menu.Item key="2">项目总览 </Menu.Item>
-                                    <Menu.Item key="3">工点总览</Menu.Item>
+                            {
+                                this.createSideFirstMenus(menus)
+                            }
+                                 {/*<SubMenu key="sub1" title={<span><Icon type="gift" /><span>信息总览</span></span>} className="menu-first">
+                                    <Menu.Item key="1" routePath="/banner">数据驾驶舱</Menu.Item>
+                                    <Menu.Item key="2" routePath="/itemcollect">项目总览 </Menu.Item>
+                                    <Menu.Item key="3" routePath="/workingpoint">工点总览</Menu.Item>
                                 </SubMenu>
                                 <SubMenu key="sub2" title={<span><Icon type="gift" /><span>工程配置</span></span>}>
-                                    <Menu.Item key="4">信息项目配置</Menu.Item>
-                                    <Menu.Item key="5">工程进度管理</Menu.Item>
-                                    <Menu.Item key="6">工程文档管理</Menu.Item>
+                                    <Menu.Item key="4" routePath="/company">信息项目配置</Menu.Item>
+                                    <Menu.Item key="5" routePath="/giftdivision">工程进度管理</Menu.Item>
+                                    <Menu.Item key="6" routePath="/thanks">工程文档管理</Menu.Item>
                                 </SubMenu>
                                 <SubMenu key="sub3" title={<span><Icon type="gift" /><span>检测管理</span></span>}>
-                                    <Menu.Item key="7">测点配置</Menu.Item>
-                                    <Menu.Item key="8">数据录入</Menu.Item>
-                                    <Menu.Item key="9">数据查询</Menu.Item>
+                                    <Menu.Item key="7" routePath="/itemcollect">测点配置</Menu.Item>
+                                    <Menu.Item key="8" routePath="/itemcollect">数据录入</Menu.Item>
+                                    <Menu.Item key="9" routePath="/itemcollect">数据查询</Menu.Item>
                                 </SubMenu>
                                 <SubMenu key="sub4" title={<span><Icon type="gift" /><span>风险源管理</span></span>}>
-                                    <Menu.Item key="10">测点配置</Menu.Item>
-                                    <Menu.Item key="11">数据录入</Menu.Item>
-                                    <Menu.Item key="12">数据查询</Menu.Item>
+                                    <Menu.Item key="10" routePath="/itemcollect">测点配置</Menu.Item>
+                                    <Menu.Item key="11" routePath="/itemcollect">数据录入</Menu.Item>
+                                    <Menu.Item key="12" routePath="/itemcollect">数据查询</Menu.Item>
                                 </SubMenu>
                                 <SubMenu key="sub5" title={<span><Icon type="gift" /><span>预警分级处理</span></span>}>
-                                    <Menu.Item key="13">预警推送</Menu.Item>
-                                    <Menu.Item key="14">数据录入</Menu.Item>
-                                    <Menu.Item key="15">数据查询</Menu.Item>
-                                </SubMenu>
+                                    <Menu.Item key="13" routePath="/itemcollect">预警推送</Menu.Item>
+                                    <Menu.Item key="14" routePath="/itemcollect">数据录入</Menu.Item>
+                                    <Menu.Item key="15" routePath="/itemcollect">数据查询</Menu.Item>
+                                </SubMenu>*/}
                             </Menu>
                         </Sider>
                         <Layout style={{ padding: '24px', position: 'relative' }}>
@@ -157,13 +188,14 @@ class App extends Component {
                                 <HashRouter>
                                     <div>
                                         <Route path = '/banner' component = {Banner} />
-                                         <Route path = '/itemcollect' component = {Itemcollect} />
+                                        <Route path = '/itemcollect' component = {Itemcollect} />
                                         <Route path = '/select' component = {Select} />
                                         <Route path = '/company' component = {Company} />
                                         <Route path = '/giftdivision' component = {Giftdivision} />
                                         <Route path = '/thanks' component = {Thanks} />
                                         <Route path = '/user' component = {User} />
                                         <Route path = '/workingpoint' component = {Workingpoint} />
+                                        <Route path = '/detectionPointConfig' component = {DetectionPointConfig} />
                                     </div>
                                 </HashRouter>
                             </Content>
