@@ -15,11 +15,15 @@ let commit = (function () {
             }
             child.setState({ data: dataSource });
         },
-        search (t,v) {
-            let child = t.child
-            child.onSearch(v)
+        search (t) {
+            // let child = t.child
+            // child.onSearch(v)
+            return function (v) {
+                t.child.onSearch(v)
+            }
         },
         getUrlParam (k) {
+            let getUrlParam;
             let regExp = new RegExp('([?]|&)' + k + '=([^&]*)(&|$)')
             let result = window.location.href.match(regExp)
             if (result) {
