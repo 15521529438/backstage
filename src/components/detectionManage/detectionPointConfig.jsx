@@ -9,6 +9,7 @@ const { Column, ColumnGroup } = Table;
 const data = [];
 for (let i = 0; i < 100; i++) {
     data.push({
+        id: i,
         key: i.toString(),
         number: i.toString(),
         detectionContent: `监测内容 ${i}`,
@@ -58,7 +59,7 @@ export default class DetectionPointConfig extends Component {
 
     // 新增
     addNews = () => {
-        console.log('新增')
+        this.props.history.push(`/detectionPointDetails/-1`);
     }
 
     // 导入
@@ -86,7 +87,7 @@ export default class DetectionPointConfig extends Component {
         {
             title: '监测内容',
             dataIndex: 'detectionContent',
-            width: '15%',
+            width: '10%',
             editable: true,
         },
         {
@@ -128,11 +129,37 @@ export default class DetectionPointConfig extends Component {
         {
             title: '操作',
             dataIndex: 'handle',
-            width: '15%',
+            width: '25%',
             render: (text, record) => {
+                const { id } = record;
                 return(
                     <div>
-                        <Button shape="circle" icon="delete" style={{background: 'rgba(0,0,0,0)'}}/>
+                        <Button
+                            shape="circle"
+                            icon="form"
+                            style={{background: 'rgba(0,0,0,0)'}}
+                        />
+                        <Button
+                            shape="circle"
+                            icon="pushpin-o"
+                            style={{background: 'rgba(0,0,0,0)'}}
+                            onClick={()=>{
+                                this.props.history.push(`/detectionPointMark/${id}`);
+                            }}
+                        />
+                        <Button
+                            shape="circle"
+                            icon="delete"
+                            style={{background: 'rgba(0,0,0,0)'}}
+                        />
+                        <Button
+                            shape="circle"
+                            icon="file-text"
+                            style={{background: 'rgba(0,0,0,0)'}}
+                            onClick={()=>{
+                                this.props.history.push(`/detectionPointDetails/${id}`);
+                            }}
+                        />
                     </div>
                 )
             },
@@ -147,10 +174,10 @@ export default class DetectionPointConfig extends Component {
                 <div className="baseQueryContent">
                     <div className="formContent">
                         <div className="formItem" style={{width: '25%'}}>
-                            <span style={{width: '40%'}}>项目名称：</span>
+                            <span style={{width: '35%'}}>项目名称：</span>
                             <Select
                                 defaultValue={subWayLines[0]}
-                                style={{ width: '60%', marginRight: 0 }}
+                                style={{ width: '65%', marginRight: 0 }}
                                 onChange={val => this.onChangeBaseQueryParams(val, 'line')}
                             >
                                 {
@@ -159,10 +186,10 @@ export default class DetectionPointConfig extends Component {
                             </Select>
                         </div>
                         <div className="formItem" style={{width: '25%'}}>
-                            <span style={{width: '40%'}}>工点：</span>
+                            <span style={{width: '30%'}}>工点：</span>
                             <Select
                                 defaultValue={workingpointData[0]}
-                                style={{ width: '60%', marginRight: 0 }}
+                                style={{ width: '70%', marginRight: 0 }}
                                 onChange={val => this.onChangeBaseQueryParams(val, 'point')}
                             >
                                 {
@@ -171,10 +198,10 @@ export default class DetectionPointConfig extends Component {
                             </Select>
                         </div>
                         <div className="formItem" style={{width: '25%'}}>
-                            <span style={{width: '40%'}}>监测类型：</span>
+                            <span style={{width: '35%'}}>监测类型：</span>
                             <Select
                                 defaultValue={detectionTypes[0]}
-                                style={{ width: '60%', marginRight: 0 }}
+                                style={{ width: '65%', marginRight: 0 }}
                                 onChange={val => this.onChangeBaseQueryParams(val, 'type')}
                             >
                                 {

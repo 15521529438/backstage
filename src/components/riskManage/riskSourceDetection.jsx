@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Table, Select, Icon, Divider, Button, Input, DatePicker } from 'antd';
 import PageHeader from '../commonComponents/PageHeader/index';
-import './datasEntery.css';
+import './riskSourceConfig.css';
 
 const { Option, OptGroup } = Select;
 const { Column, ColumnGroup } = Table;
@@ -17,7 +17,7 @@ for (let i = 0; i < 100; i++) {
     });
 }
 
-export default class DatasEntery extends Component {
+export default class RiskSourceDetection extends Component {
     state = {
         workingpointData: ['梧桐山', '笔架山', '莲花山'],
         detectionTypes: ['第三方检测', '第三方检测', '第三方检测'],
