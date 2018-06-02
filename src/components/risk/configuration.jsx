@@ -1,6 +1,6 @@
 import React from 'react';
-//import Tabcontent from '../project/tabcontent'
- //<Tabcontent onRef={this.onRef}></Tabcontent>
+import Tabcontent from '../project/tabcontent'
+
 import { Tabs, Input, Button, Icon, Select } from 'antd';
 import '../project/project.css'
 import './risk.css'
@@ -69,8 +69,7 @@ class Configuration extends React.Component {
                                 <Button className="configuration_button">更多筛选</Button>
                                 <Button className="configuration_button configuration_end_button">下载模板</Button>
                             </div>
-
-
+                            <Tabcontent onRef={this.onRef}></Tabcontent>
                         </TabPane>
                         <TabPane tab="管线" key="2">管线</TabPane>
                   </Tabs>
