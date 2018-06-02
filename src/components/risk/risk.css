@@ -1,0 +1,125 @@
+/* configuration */
+.configuration > button {
+    width: 80px;
+    height: 30px;
+}
+
+.configuration .ant-btn-primary {
+    margin: 0 15px 0 20px;
+}
+
+.configuration .configuration_button {
+    border-radius: 3px;
+    border: solid 1px #249cfa;
+}
+
+.configuration_filter {
+    font-size: 16px;
+    color: #666666;
+}
+
+.configuration .ant-select-enabled {
+    margin: 0;
+}
+
+.configuration_filter {
+    margin: 24px 0 1em 22px;
+}
+
+.configuration_end_button {
+    margin-left: 15px;
+}
+
+/* monitor */
+
+.monitor_top {
+    margin-top: 12px;
+    overflow: hidden;
+}
+
+.monitor_top_left {
+    margin-left: 0.9%;
+    float: left;
+}
+
+.monitor_top_right {
+    margin-right: 1%;
+    float: right;
+}
+
+.monitor_top_right {
+    width: 16%;   
+}
+
+ .monitor_top_right li. waring {
+    color: #ff0000;
+ }
+
+.monitor_top_right .anticon-warning {
+    display: none;
+}
+
+.monitor_top_right li.waring .anticon-warning {
+        display: inline-block;
+        color: #ff0000;
+        float: right;
+        line-height: 21px;
+  }
+
+ .monitor_top_right_one {
+    height: 383px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: solid 2px #d0daf3;
+ }
+
+.monitor_top_right_one > ul {
+    margin: 0 12px;
+    text-align: left;
+}
+
+ .monitor_top_right_one li {
+    font-size: 14px;
+    margin-top: 22px;
+ }
+
+.monitor_top_right_one li:last-child {
+    margin-bottom: 22px;
+}
+
+ .monitor_top_right_one > h2 {
+    font-size: 16px;
+    color: #333333;
+    margin: 14px 12px 0;
+    padding-bottom: 12px;
+    border-bottom: dashed 0.019rem #d0daf3;
+ }
+
+.monitor_top_right_two {
+    height: 203px;
+    background-color: #f4f7fd;
+    border: solid 2px #d0daf3;
+    margin-top: 20px;
+}
+
+#main, #main2 {
+    float: left;
+}
+
+#main1, #main3 {
+    float: right;
+}
+
+#main2 {
+    margin-left: 11px;
+}
+
+#main3 {
+    margin-right: 11px;
+}
+
+.monitor_bottom {
+    margin-top: 25px;
+}
+

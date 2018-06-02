@@ -1,7 +1,8 @@
 import React from 'react';
 import Tabcontent from '../project/tabcontent'
+
 import { Button, Select, DatePicker } from 'antd';
-import './project.css'
+import './project.css';
 const { Option } = Select;
 
 const provinceData = ['地铁1号线', '地铁2号线', '地铁3号线'];
@@ -46,7 +47,7 @@ class Projectprogress extends React.Component {
                         <Button type="primary">查询</Button>
                         <Button className="message_button_last">新增</Button>
                     </div>
-                    <Tabcontent onRef={this.onRef}></Tabcontent>
+                <Tabcontent onRef={this.onRef}></Tabcontent>
                 </div>
             );
     }

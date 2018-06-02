@@ -60,21 +60,6 @@ export default class DatasEntery extends Component {
         console.log('下载模板')
     }
 
-    // 删除选中
-    deleteChoosed = () => {
-        console.log('删除选中')
-    }
-
-    // 保存
-    saveCurrent = () => {
-        console.log('保存')
-    }
-
-    // 返回
-    goBack = () => {
-        console.log('返回')
-    }
-
     columns = [
         {
             title: '序号',
@@ -199,35 +184,6 @@ export default class DatasEntery extends Component {
                         columns={this.columns}
                         rowClassName="editable-row"
                     />
-                    <div className="footerHeadle">
-                        <Button
-                            style={{marginLeft: 10}}
-                            className="baseHandleBtn"
-                            type="primary"
-                            onClick={this.deleteChoosed}>删除选中
-                        </Button>
-                        <Button
-                            style={{border: '1px solid #2a78f6', color: '#2a78f6'}}
-                            className="baseHandleBtn"
-                            onClick={this.saveCurrent}>保存
-                        </Button>
-                        <Button
-                            style={{border: '1px solid #2a78f6', color: '#2a78f6'}}
-                            className="baseHandleBtn"
-                            onClick={this.goBack}>返回
-                        </Button>
-                    </div>
-                    <div className="descContent">
-                        <div className="main_content">
-                            <span>说明：</span>
-                            <p>1.若初始值输入为空，则使用该测点上次录入的初始值。</p>
-                            <p>2.若本次测值输入为空，则只进行前期累计变化量计算。</p>
-                            <p>3.力的单位为KN,其他数值单位为mm。</p>
-                            <p>4.当测点类型为支护桩（墙顶部水平位移时，水平位移方向（X/Y）必填；
-                                当测点类型为支护桩(墙）水平位移时，测斜深度m必填测点类型为其他时，
-                                水平位移方向（X/Y）和测斜深度m两项均无。</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         );

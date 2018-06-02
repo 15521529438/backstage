@@ -88,8 +88,6 @@ export default class DatasQuery extends Component {
         const val = e.target.value;
         this.setState({
             checkChart: {...checkChart, [fileName]: val}
-        }, () => {
-            console.log(this.state.checkChart)
         })
     }
 
@@ -148,8 +146,8 @@ export default class DatasQuery extends Component {
                         <div className="chooseChartType">
                             <span>图类型：</span>
                             <RadioGroup
-                                onChange={val => this.chooseChartInfo(val, 'checkChartType')}
-                                value={checkChart.checkChartType}
+                                onChange={val => this.chooseChartInfo(val, 'checkChartDatas')}
+                                value={checkChart.checkChartDatas}
                             >
                                 <Radio value={1}>测量值时间序列曲线</Radio>
                                 <Radio value={2}>测斜曲线</Radio>
@@ -163,26 +161,8 @@ export default class DatasQuery extends Component {
                             </Button>
                         </div>
                     </div>
-                    <div className="chartContent">
-                        <div className="chartPoint">
-                            <div className="chartPointTitle">
-                                <span>测点（孔）号：TY3445</span>
-                                <span>测点类型：立柱</span>
-                                <div className="detectionDate">监测时间：2018-2-18  7：00</div>
-                            </div>
-                            <div className="chartPointContent chartContent">
-                                图表内容
-                            </div>
-                        </div>
-                        <div className="chartSpeed">
-                            <div className="chartSpeedTitle">
-                                <span>变化速率</span>
-                                <div className="detectionDate">监测时间：2018-2-18  7：00</div>
-                            </div>
-                            <div className="chartSpeedContent chartContent">
-                                变化速率内容
-                            </div>
-                        </div>
+                    <div>
+                        图表
                     </div>
                 </div>
             );
@@ -196,6 +176,7 @@ export default class DatasQuery extends Component {
             checkTypes, currentCheckType,
             checkDateRange,
         } = this.state;
+        console.log('currentCheckType', currentCheckType)
         return(
             <div className="detectionPointConfigContent">
                 <PageHeader title="数据查询"/>

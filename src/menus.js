@@ -76,14 +76,19 @@ const menus = [
 		routePath: '',
 		children: [
 			{
-				name: '风险源配置',
+				name: '测点配置',
 				key: 10,
-				routePath: 'riskSourceConfig',
+				routePath: '',
 			},
 			{
-				name: '风险源监测',
+				name: '数据录入',
 				key: 11,
-				routePath: 'riskSourceDetection',
+				routePath: '',
+			},
+			{
+				name: '数据查询',
+				key: 12,
+				routePath: '',
 			},
 		],
 	},

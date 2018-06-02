@@ -9,8 +9,8 @@ import  'echarts/lib/chart/pie';
 // 引入提示框和标题组件
 import 'echarts/lib/component/tooltip';
 import 'echarts/lib/component/title';
-const { Option, OptGroup } = Select;
-const { Column, ColumnGroup } = Table;
+const { Option } = Select;
+const { Column } = Table;
 
 
 const data = [{

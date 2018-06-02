@@ -7,7 +7,7 @@ import { Select, Table, Divider, Icon   } from 'antd';
 // const { RangePicker } = DatePicker;
 // const Search = Input.Search;
 // import ReactDOM from 'react-dom';
-const { Option, OptGroup } = Select;
+const { Option } = Select;
 
 
 const provinceData = ['地铁1号线', '地铁2号线', '地铁3号线'];

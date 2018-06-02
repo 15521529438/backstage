@@ -57,44 +57,6 @@
 .handleContent {
     float: right;
 }
-.chartPoint, .chartSpeed {
-    display: inline-block;
-    width: 50%;
-    box-sizing: border-box;
-}
-.chartPointTitle, .chartSpeedTitle{
-    height: 40px;
-    background-color: #f4f7fd;
-
-}
-
-.chartPoint {
-    padding-right: 10px;
-}
-
-.chartSpeed {
-    padding-left: 10px;
-}
-
-.chartPointTitle span, .chartSpeedTitle span{
-    color: #333333;
-    font-size:16px;
-    line-height: 40px;
-    padding: 0 10px;
-}
-
-.chartPointTitle .detectionDate, .chartSpeedTitle .detectionDate {
-    float: right;
-    line-height: 40px;
-    font-size:14px;
-    color: #666;
-    padding-right: 10px;
-}
-
-.chartContent {
-    padding: 10px;
-}
-
 
 /*.chooseCheckContent .ant-tabs-bar{
     display: none!important;

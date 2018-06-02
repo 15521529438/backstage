@@ -2,6 +2,10 @@
   height: 100%;
 }
 
+html {
+  overflow-y: hidden;
+}
+
 .ant-layout-sider {
   /*width: 30%;*/
   /*float: left;*/
