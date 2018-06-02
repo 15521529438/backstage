@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Table, Select, Icon, Divider, Button, Input } from 'antd';
+import { Table, Select, Icon, Button, Input } from 'antd';
 import PageHeader from '../commonComponents/PageHeader/index';
 import './detectionPointConfig.css';
 
-const { Option, OptGroup } = Select;
-const { Column, ColumnGroup } = Table;
+const { Option } = Select;
 
 const data = [];
 for (let i = 0; i < 100; i++) {

@@ -9,6 +9,9 @@ import Projectdocument from './components/project/projectdocument'
 import DetectionPointConfig from './components/detectionManage/detectionPointConfig';
 import DatasEntery from './components/detectionManage/datasEntery';
 import DatasQuery from './components/detectionManage/datasQuery';
+import Configuration from './components/risk/configuration';
+import Monitor from './components/risk/monitor';
+import WaringPush from './components/earlyWarning/waringPush';
 // import commit from './js/commit'
 import './App.css';
 import protrait from './img/protrait.png'
@@ -115,34 +118,9 @@ class App extends Component {
                                 style={{ height: '100%', borderRight: 0 }}
                                 onClick={this.goTo}
                             >
-                            {
-                                this.createSideFirstMenus(menus)
-                            }
-                                 {/*<SubMenu key="sub1" title={<span><Icon type="gift" /><span>信息总览</span></span>} className="menu-first">
-                                    <Menu.Item key="1" routePath="/banner">数据驾驶舱</Menu.Item>
-                                    <Menu.Item key="2" routePath="/itemcollect">项目总览 </Menu.Item>
-                                    <Menu.Item key="3" routePath="/workingpoint">工点总览</Menu.Item>
-                                </SubMenu>
-                                <SubMenu key="sub2" title={<span><Icon type="gift" /><span>工程配置</span></span>}>
-                                    <Menu.Item key="4" routePath="/company">信息项目配置</Menu.Item>
-                                    <Menu.Item key="5" routePath="/giftdivision">工程进度管理</Menu.Item>
-                                    <Menu.Item key="6" routePath="/thanks">工程文档管理</Menu.Item>
-                                </SubMenu>
-                                <SubMenu key="sub3" title={<span><Icon type="gift" /><span>检测管理</span></span>}>
-                                    <Menu.Item key="7" routePath="/itemcollect">测点配置</Menu.Item>
-                                    <Menu.Item key="8" routePath="/itemcollect">数据录入</Menu.Item>
-                                    <Menu.Item key="9" routePath="/itemcollect">数据查询</Menu.Item>
-                                </SubMenu>
-                                <SubMenu key="sub4" title={<span><Icon type="gift" /><span>风险源管理</span></span>}>
-                                    <Menu.Item key="10" routePath="/itemcollect">测点配置</Menu.Item>
-                                    <Menu.Item key="11" routePath="/itemcollect">数据录入</Menu.Item>
-                                    <Menu.Item key="12" routePath="/itemcollect">数据查询</Menu.Item>
-                                </SubMenu>
-                                <SubMenu key="sub5" title={<span><Icon type="gift" /><span>预警分级处理</span></span>}>
-                                    <Menu.Item key="13" routePath="/itemcollect">预警推送</Menu.Item>
-                                    <Menu.Item key="14" routePath="/itemcollect">数据录入</Menu.Item>
-                                    <Menu.Item key="15" routePath="/itemcollect">数据查询</Menu.Item>
-                                </SubMenu>*/}
+                                {
+                                    this.createSideFirstMenus(menus)
+                                }
                             </Menu>
                         </Sider>
                         <Layout style={{ padding: '24px', position: 'relative',paddingRight: 0 }}>
@@ -158,6 +136,10 @@ class App extends Component {
                                         <Route path = '/projectprogress' component = {Projectprogress} />
                                         <Route path = '/projectdocument' component = {Projectdocument} />
                                         
+                                        <Route path = '/configuration' component = {Configuration} />
+                                        <Route path = '/monitor' component = {Monitor} />
+
+                                        <Route path = '/waringPush' component = {WaringPush} />
                                     </div>
                                 </HashRouter>
                             </Content>

@@ -20,8 +20,8 @@ const menus = [
 				name: '工点总览',
 				key: 3,
 				routePath: 'workingpoint',
-			},
-		],
+			}
+		]
 	},
 	{
 		name: '工程配置',
@@ -43,8 +43,8 @@ const menus = [
 				name: '工程文档管理',
 				key: 6,
 				routePath: 'projectdocument',
-			},
-		],
+			}
+		]
 	},
 	{
 		name: '检测管理',
@@ -66,8 +66,8 @@ const menus = [
 				name: '数据查询',
 				key: 9,
 				routePath: 'datasQuery',
-			},
-		],
+			}
+		]
 	},
 	{
 		name: '风险源管理',
@@ -76,21 +76,16 @@ const menus = [
 		routePath: '',
 		children: [
 			{
-				name: '测点配置',
+				name: '风险源配置',
 				key: 10,
-				routePath: '',
+				routePath: 'configuration',
 			},
 			{
-				name: '数据录入',
+				name: '风险源监测',
 				key: 11,
-				routePath: '',
-			},
-			{
-				name: '数据查询',
-				key: 12,
-				routePath: '',
-			},
-		],
+				routePath: 'monitor',
+			}
+		]
 	},
 	{
 		name: '预警分级处理',
@@ -100,19 +95,9 @@ const menus = [
 		children: [
 			{
 				name: '预警推送',
-				key: 13,
-				routePath: '',
-			},
-			{
-				name: '数据录入',
-				key: 14,
-				routePath: '',
-			},
-			{
-				name: '数据查询',
-				key: 15,
-				routePath: '',
-			},
+				key: 12,
+				routePath: 'waringPush',
+			}
 		],
 	},
 ]

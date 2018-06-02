@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Table, Select, Icon, Divider, Button, Input, Radio, Tabs } from 'antd';
+import { Table, Select, Button, Radio } from 'antd';
 import PageHeader from '../commonComponents/PageHeader/index';
 import './datasQuery.css';
 
 const { Option } = Select;
 const ButtonGroup = Button.Group;
 const RadioGroup = Radio.Group;
-const TabPane = Tabs.TabPane;
+// const TabPane = Tabs.TabPane;
 
 const data = [];
 for (let i = 0; i < 100; i++) {

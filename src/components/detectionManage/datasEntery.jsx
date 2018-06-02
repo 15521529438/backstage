@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Table, Select, Icon, Divider, Button, Input, DatePicker } from 'antd';
+import { Table, Select, Button, DatePicker } from 'antd';
 import PageHeader from '../commonComponents/PageHeader/index';
 import './datasEntery.css';
 
-const { Option, OptGroup } = Select;
-const { Column, ColumnGroup } = Table;
+const { Option } = Select;
+// const { Column, ColumnGroup } = Table;
 
 const data = [];
 for (let i = 0; i < 100; i++) {
