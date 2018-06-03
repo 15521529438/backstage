@@ -9,7 +9,7 @@ const menus = [
 			{
 				name: '数据驾驶舱',
 				key: 1,
-				routePath: 'banner',
+				routePath: 'controlerDatas',
 			},
 			{
 				name: '项目总览',

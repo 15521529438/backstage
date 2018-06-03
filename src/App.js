@@ -3,6 +3,7 @@ import { HashRouter, Route} from 'react-router-dom';
 import { Layout, Menu, Icon } from 'antd';
 import Itemcollect from './components/pandect/itemcollect'
 import Workingpoint from './components/pandect/workingpoint'
+import ControlerDatas from './components/pandect/controlerDatas'
 import Projectmessage from './components/project/projectmessage'
 import Projectprogress from './components/project/projectprogress'
 import Projectdocument from './components/project/projectdocument'
@@ -133,6 +134,7 @@ class App extends Component {
                                     <div>
                                         <Route path = '/itemcollect' component = {Itemcollect} />
                                         <Route path = '/workingpoint' component = {Workingpoint} />
+                                        <Route path = '/controlerDatas' component = {ControlerDatas} />
                                         <Route path = '/detectionPointConfig' component = {DetectionPointConfig} />
                                         <Route path = '/detectionPointMark/:id' component = {DetectionPointMark} />
                                         <Route path = '/detectionPointDetails/:id' component = {DetectionPointDetails} />
