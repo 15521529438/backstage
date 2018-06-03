@@ -1,0 +1,17 @@
+.markContent {
+    width: 100%;
+    padding: 10px;
+}
+
+.markLeft {
+    margin-right: 295px;
+    height: 890px;
+    border: solid 2px #d0daf3;
+}
+
+.markInfor {
+    float: right;
+    width: 280px;
+    height: 890px;
+    border: solid 2px #d0daf3;
+}

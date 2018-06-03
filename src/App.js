@@ -7,11 +7,15 @@ import Projectmessage from './components/project/projectmessage'
 import Projectprogress from './components/project/projectprogress'
 import Projectdocument from './components/project/projectdocument'
 import DetectionPointConfig from './components/detectionManage/detectionPointConfig';
+import DetectionPointMark from './components/detectionManage/detectionPointMark';
+import DetectionPointDetails from './components/detectionManage/detectionPointDetails';
 import DatasEntery from './components/detectionManage/datasEntery';
 import DatasQuery from './components/detectionManage/datasQuery';
 import Configuration from './components/risk/configuration';
 import Monitor from './components/risk/monitor';
 import WaringPush from './components/earlyWarning/waringPush';
+// import RiskSourceConfig from './components/riskManage/riskSourceConfig';
+// import RiskSourceDetection from './components/riskManage/riskSourceDetection';
 // import commit from './js/commit'
 import './App.css';
 import protrait from './img/protrait.png'
@@ -130,15 +134,17 @@ class App extends Component {
                                         <Route path = '/itemcollect' component = {Itemcollect} />
                                         <Route path = '/workingpoint' component = {Workingpoint} />
                                         <Route path = '/detectionPointConfig' component = {DetectionPointConfig} />
+                                        <Route path = '/detectionPointMark/:id' component = {DetectionPointMark} />
+                                        <Route path = '/detectionPointDetails/:id' component = {DetectionPointDetails} />
                                         <Route path = '/datasEntery' component = {DatasEntery} />
                                         <Route path = '/datasQuery' component = {DatasQuery} />
+                                        {/*<Route path = '/riskSourceConfig' component = {RiskSourceConfig} />*/}
+                                        {/*<Route path = '/riskSourceDetection' component = {RiskSourceDetection} />*/}
                                         <Route path = '/projectmessage' component = {Projectmessage} />
                                         <Route path = '/projectprogress' component = {Projectprogress} />
                                         <Route path = '/projectdocument' component = {Projectdocument} />
-                                        
                                         <Route path = '/configuration' component = {Configuration} />
                                         <Route path = '/monitor' component = {Monitor} />
-
                                         <Route path = '/waringPush' component = {WaringPush} />
                                     </div>
                                 </HashRouter>
